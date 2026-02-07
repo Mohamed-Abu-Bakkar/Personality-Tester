@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Brain/Mind Icon -->
+  <circle cx="50" cy="50" r="45" fill="url(#tealGradient)"/>
+  
+  <!-- Brain pattern -->
+  <path d="M 35 30 Q 25 35 25 45 Q 25 55 35 60 Q 45 65 50 60 Q 55 55 55 50 Q 55 45 50 40 Q 45 35 35 30" 
+        fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  
+  <path d="M 65 30 Q 75 35 75 45 Q 75 55 65 60 Q 55 65 50 60" 
+        fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  
+  <path d="M 50 40 Q 50 50 50 60" 
+        fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Personality circles -->
+  <circle cx="35" cy="45" r="4" fill="white" opacity="0.8"/>
+  <circle cx="50" cy="48" r="4" fill="white" opacity="0.8"/>
+  <circle cx="65" cy="45" r="4" fill="white" opacity="0.8"/>
+</svg>

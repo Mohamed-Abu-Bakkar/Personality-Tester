@@ -1,0 +1,348 @@
+:root {
+  /* Teal Background colors */
+  --bg-background: 240 253 250;
+  --background: 180 100% 99%;
+  --foreground: 183 100% 10%;
+  
+  /* Text colors - Dark Teal & Slate */
+  --text-foreground: 15 23 42;
+  --primary: 173 80% 40%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Muted colors - Teal grays */
+  --muted: 180 25% 94%;
+  --muted-foreground: 180 10% 46%;
+  
+  /* Accent colors - Solid Teal */
+  --accent: 173 80% 40%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* Destructive */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Border colors - Light Teal */
+  --border: 180 30% 90%;
+  --input: 180 30% 90%;
+  --ring: 173 80% 40%;
+  
+  /* Card - Clean white */
+  --card: 0 0% 100%;
+  --card-foreground: 183 100% 10%;
+  
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 183 100% 10%;
+  
+  /* Teal Psychology theme colors */
+  --psychology-deep: 173 80% 40%;
+  --psychology-light: 173 60% 60%;
+  --psychology-neutral: 180 10% 46%;
+  --psychology-accent: 24 95% 53%;
+  
+  /* Radius */
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  line-height: 1.6;
+}
+
+/* Solid Teal backgrounds */
+.hero-gradient {
+  background: #14b8a6;
+}
+
+.hero-mesh {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+}
+
+.hero-overlay {
+  background: rgba(20, 184, 166, 0.05);
+}
+
+.card-gradient {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+}
+
+/* Smooth Professional Animations */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(94, 234, 212, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(20, 184, 166, 0.5),
+                0 0 60px rgba(94, 234, 212, 0.4);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.glow-effect {
+  animation: glow 4s ease-in-out infinite;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-effect:hover {
+  animation: none;
+  box-shadow: 0 12px 48px rgba(20, 184, 166, 0.4),
+              0 0 80px rgba(94, 234, 212, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Transition utilities */
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-fast {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-slow {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Professional Psychology theme color utilities */
+.text-psychology-deep {
+  color: hsl(var(--psychology-deep));
+}
+
+.text-psychology-light {
+  color: hsl(var(--psychology-light));
+}
+
+.text-psychology-neutral {
+  color: hsl(var(--psychology-neutral));
+}
+
+.bg-psychology-deep {
+  background-color: hsl(var(--psychology-deep));
+}
+
+.bg-psychology-light {
+  background-color: hsl(var(--psychology-light));
+}
+
+.border-psychology-deep {
+  border-color: hsl(var(--psychology-deep));
+}
+
+.border-psychology-light {
+  border-color: hsl(var(--psychology-light));
+}
+
+.hover\:border-psychology-deep:hover {
+  border-color: hsl(var(--psychology-deep));
+}
+
+.hover\:border-psychology-light:hover {
+  border-color: hsl(var(--psychology-light));
+}
+
+.hover\:bg-psychology-deep\/10:hover {
+  background-color: hsl(var(--psychology-deep) / 0.1);
+}
+
+.group:hover .group-hover\:bg-psychology-deep {
+  background-color: hsl(var(--psychology-deep));
+}
+
+.group:hover .group-hover\:text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+
+.group:hover .group-hover\:text-psychology-light {
+  color: hsl(var(--psychology-light));
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(20, 184, 166, 0.35);
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Solid Teal text */
+.gradient-text {
+  color: #14b8a6;
+  font-weight: 700;
+}
+
+/* Button effects */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s;
+}
+
+.btn-shine:hover::before {
+  left: 100%;
+}
+
+/* Stagger animation delay utility */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(20, 184, 166, 0.3);
+  color: hsl(var(--foreground));
+}
