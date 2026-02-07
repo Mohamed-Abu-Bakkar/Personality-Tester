@@ -7,6 +7,7 @@ import { ThemeProvider as SCThemeProvider } from "styled-components";
 import Home from "./Home";
 import Test from "./Test";
 import Result from "./Result";
+import NotFound from "./NotFound";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,8 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/test" element={<Test />} />
           <Route path="/result" element={<Result />} />
+          <Route path="*" element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </SCThemeProvider>
